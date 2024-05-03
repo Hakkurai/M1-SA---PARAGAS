@@ -138,7 +138,7 @@ function collectMeat(player, meat) {
         meat.setBounce(Phaser.Math.FloatBetween(0.4, 0.8));
     }
 
-    if (score % 5 === 0) {
+    if (score % 120 === 0) {
         var x = Phaser.Math.Between(0, 800);
         var meteor = meteors.create(x, 0, 'meteor');
         meteor.setBounce(1);
