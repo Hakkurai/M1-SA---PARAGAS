@@ -87,7 +87,7 @@ function create() {
     this.physics.add.collider(meats, platforms);
     this.physics.add.overlap(player, meats, collectMeat, null, this);
 
-    scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' });
+    scoreText = this.add.text(16, 16, 'Meat Collected: 0', { fontSize: '20px', fill: '#000' }).setOrigin(-2.4, 0);
 
     meteors = this.physics.add.group();
     this.physics.add.collider(meteors, platforms);
@@ -117,7 +117,7 @@ function collectMeat(player, meat) {
     meat.disableBody(true, true);
 
     score += 10;
-    scoreText.setText('Score: ' + score);
+    scoreText.setText('Meat Collected: ' + score);
 
     if (++meatColorIndex >= meatColors.length) {
         meatColorIndex = 0;
